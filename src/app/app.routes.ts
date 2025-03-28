@@ -1,35 +1,31 @@
 import { Routes } from '@angular/router';
 import { WeatherComponent } from './weather/weather.component';
-import { CitiesComponent } from './cities/cities.component';
-import { CountriesComponent } from './countries/countries.component';
+import { BrandNameComponent } from './brand-name/brand-name.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { CountryPopulationComponent } from './country-population/country-population.component';
+import { TrendingItemsComponent } from './trending-items/trending-items.component';
+import { ArticleClothingComponent } from './article-clothing/article-clothing.component';
+
 
 export const routes: Routes = [
     {
-        path: "weather", 
-        component: WeatherComponent
+        path: "trends", 
+        component: TrendingItemsComponent
     },
     {
-        path: "cities", 
-        component: CitiesComponent
+        path: "brands", 
+        component: BrandNameComponent
     },
     {
-        path: "countries", 
-        component: CountriesComponent
+        path: "clothes", 
+        component: ArticleClothingComponent
     },
     {
         path: "nav-bar",
         component: NavBarComponent
     },
     {
-        path: "countryPopulation/:id",
-        component: CountryPopulationComponent
-
-    },
-    {
         path: "",
-        component: WeatherComponent,
+        component: TrendingItemsComponent,
         pathMatch: "full"
     }
     
