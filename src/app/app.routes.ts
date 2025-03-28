@@ -1,5 +1,5 @@
 import { Routes } from '@angular/router';
-import { WeatherComponent } from './weather/weather.component';
+
 import { BrandNameComponent } from './brand-name/brand-name.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { TrendingItemsComponent } from './trending-items/trending-items.component';

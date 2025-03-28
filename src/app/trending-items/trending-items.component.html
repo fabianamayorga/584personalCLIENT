@@ -1,36 +1,26 @@
-<h1 id="tableLabel">Trending Items</h1>
-
-<p>This component demonstrates fetching data from the server.</p>
-
-
-@if(trends){
-
-<table>
+<h1>Trends</h1>
+<p>Here's a list of countries: feel free to play with it.</p>
+@if (trends) {
+  <table class='table table-striped' aria-labelledby="tableLabel">
     <thead>
-        <tr>
-            <th>Item </th>
-            <th>Size </th>
-            <th>Store </th>
-            <th>Store ID</th>
-            <th>Location</th>
-        </tr>
+      <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Location</th>
+        <th>Store</th>
+      </tr>
     </thead>
     <tbody>
-        @for(forecast of trends; track $index) {
-
-        <tr>
-            <td>{{ trends.item }}</td>
-            <td>{{ trends.store }}</td>
-            <td>{{ trends.storeID }}</td>
-            <td>{{ trends.location }}</td>
-        </tr>
+      @for (trend of trends; track trend.itemID) {
+        <tr ngFor="let trend of trends">
+          <td><a [routerLink]="['/trendingItems', trend.itemID]">{{ trend.itemID }}</a></td> 
+          <td>{{ trend.itemType }}</td>
+          <td>{{ trend.location }}</td>
+          <td>{{ trend.store }}</td>
+        </tr>  
       }
     </tbody>
-</table>
+  </table>
+} @else {
+  <p><em>Loading...</em></p>
 }
-
-@else {
-  <p><em>Loading... Please refresh once the ASP.NET backend has started. See <a href="https://aka.ms/jspsintegrationangular">https://aka.ms/jspsintegrationangular</a> for more details.</em></p>
-}
-
-
