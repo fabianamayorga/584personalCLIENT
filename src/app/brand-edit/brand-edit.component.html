@@ -1,0 +1,20 @@
+<div class="brandEdit">
+  <h1>Edit Brand</h1>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <mat-form-field>
+      <mat-label>Brand Name:</mat-label>
+      <input matInput formControlName="brandName" placeholder="Enter brand name" required />
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Location:</mat-label>
+      <input matInput formControlName="location" placeholder="Enter brand location" required />
+    </mat-form-field>
+
+    <div>
+      <button mat-flat-button color="primary" type="submit">Submit Changes</button>
+      <button mat-flat-button color="accent" [routerLink]="['/brands']">Cancel</button>
+    </div>
+  </form>
+</div>

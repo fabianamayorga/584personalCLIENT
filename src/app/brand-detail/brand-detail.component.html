@@ -1,0 +1,9 @@
+<h2>Brand Details</h2>
+
+@if (brand) {
+  <p><strong>ID:</strong> {{ brand.id }}</p>
+  <p><strong>Name:</strong> {{ brand.name }}</p>
+  <p><strong>Location:</strong> {{ brand.location }}</p>
+}
+
+<a mat-flat-button color="primary" routerLink="/brands">Back to Brands</a>

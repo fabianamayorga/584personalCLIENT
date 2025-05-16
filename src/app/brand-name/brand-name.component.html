@@ -1,1 +1,30 @@
-<p>brand-name works!</p>
+<h1>Brands</h1>
+<p>Here's a list of brands:</p>
+
+@if (brands) {
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Brand</th>
+        <th>Location</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (brand of brands; track brand.id) {
+        <tr>
+          <td>
+            <a [routerLink]="['/brand-summary', brand.id]">{{ brand.id }}</a>
+          </td>
+
+          <td>{{ brand.name }}</td>
+          <td>{{ brand.location }}</td>
+         
+
+        </tr>
+      }
+    </tbody>
+  </table>
+} @else {
+  <p><em>Loading...</em></p>
+}

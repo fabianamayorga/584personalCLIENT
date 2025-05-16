@@ -1,0 +1,11 @@
+<h2>Brand Summary</h2>
+
+@if (summary) {
+  <p><strong>ID:</strong> {{ summary.id }}</p>
+  <p><strong>Name:</strong> {{ summary.brandName }}</p>
+  <p><strong>Location:</strong> {{ summary.location }}</p>
+  <p><strong>Item Count:</strong> {{ summary.itemCount }}</p>
+  <p><strong>Total Quantity:</strong> {{ summary.totalQuantity }}</p>
+}
+
+<a routerLink="/brands">← Back to Brands</a>
